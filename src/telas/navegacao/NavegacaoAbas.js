@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import TelaResumo from '../telas/TelaResumo';
-import TelaCadastro from '../telas/TelaCadastro';
-import TelaListagem from '../telas/TelaListagem';
+import TelaResumo from '../TelaResumo';
+import TelaCadastro from '../TelaCadastro';
+import TelaListagem from '../TelaListagem';
 
 const Tab = createBottomTabNavigator();
 
@@ -27,7 +27,7 @@ export default function NavegacaoAbas() {
       <Tab.Screen name="Cadastrar">
         {() => <TelaCadastro adicionarItem={adicionarItem} />}
       </Tab.Screen>
-      <Tab.Screen name="Arsenal">
+      <Tab.Screen name="Lista">
         {() => <TelaListagem lista={lista} removerItem={removerItem} />}
       </Tab.Screen>
     </Tab.Navigator>
